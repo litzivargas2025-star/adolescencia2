@@ -1,0 +1,107 @@
+/* 1. Registrar tu archivo de fuente local */
+@font-face {
+    font-family: 'CHICKEN_Pie';
+    src: url('CHICKEN_Pie.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Aplica la tipografía general al resto de la página */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.portada {
+    /* Hace que la portada ocupe el 100% de la altura de la pantalla */
+    height: 100vh;
+    width: 100%;
+    
+    /* Imagen de fondo (opcional) */
+    background-image: url('portada1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Centrar el contenido usando Flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    
+    /* Fondo oscuro semitransparente para legibilidad (opcional si usas imagen) */
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+}
+
+.contenido-portada h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    /* 2. Aplicar la fuente registrada al título */
+    font-family: 'CHICKEN_Pie', sans-serif;
+    text-transform: uppercase;
+    color: #f4ecec;
+    letter-spacing: 2px;
+ 
+    
+}
+
+.contenido-portada p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/* ===== Estilo Zine para las secciones de información (.info) ===== */
+.info {
+  background: #fff;
+  border: 3px solid var(--oscuro, #2E4A12);
+  padding: 32px;
+  margin-bottom: 28px;
+  box-shadow: 8px 8px 0 var(--acc, #7B3FA0);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* Le da una rotación ligera alternada para que parezca un collage de revista */
+.info:nth-child(odd) {
+  transform: rotate(-0.8deg);
+}
+
+.info:nth-child(even) {
+  transform: rotate(0.8deg);
+}
+
+.info:hover {
+  transform: rotate(0deg) scale(1.005);
+}
+
+/* Títulos de las secciones info */
+.info h2 {
+  color: var(--acc, #7B3FA0);
+  font-style: italic;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Textos y listas dentro de info */
+.info p, .info li {
+  line-height: 1.7;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.info ul {
+  padding-left: 20px;
+}
